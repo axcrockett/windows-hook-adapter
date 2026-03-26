@@ -94,12 +94,4 @@ if TOOL_NAME in ('Write', 'Edit'):
 
 ## Unsupported Constructs
 
-These require manual conversion:
-- Heredocs (`<<EOF`)
-- Process substitution (`<(...)`)
-- Pipes with multiple stages (`cmd1 | cmd2 | cmd3`)
-- Bash arrays and associative arrays
-- Brace expansion (`{a,b,c}`)
-- Arithmetic expressions (`$((...))`)
-
-The converter marks these with `# TODO: manual conversion required`.
+Heredocs, process substitution, multi-stage pipes, arrays, brace expansion, and arithmetic get a `# TODO: manual conversion required` comment.

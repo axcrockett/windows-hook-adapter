@@ -91,12 +91,8 @@ Always use array-based argument passing (not string concatenation) to avoid inje
 
 ## 7. Tilde Expansion
 
-`~` expands to `$HOME` in Git Bash but not in CMD, PowerShell, or Python's `os.path`.
-
-**Safe pattern:** Use full paths or `os.path.expanduser('~')` in Python, `os.homedir()` in Node.js, `$HOME` in PowerShell.
+`~` expands in Git Bash but not CMD, PowerShell, or Python. Use `os.path.expanduser('~')` (Python), `os.homedir()` (Node), `$HOME` (PowerShell).
 
 ## 8. Hook Timeout on Cold Start
 
-Python interpreter cold start on Windows takes 500-1000ms. If your hook has a 5-second timeout and does network I/O, you might hit it.
-
-**Mitigation:** Set hook timeout to 15s for Python hooks. Node.js hooks start in ~200ms, so 5s is usually fine.
+Python cold start on Windows is 500-1000ms. Set hook timeout to 15s for Python hooks. Node.js starts in ~200ms, so 5s is fine.
