@@ -1,0 +1,12 @@
+{
+  "name": "windows-hook-adapter",
+  "description": "Convert bash-based AI coding agent hooks to Windows-compatible formats (Python, Node.js, PowerShell).",
+  "version": "1.0.0",
+  "author": {
+    "name": "axcrockett",
+    "url": "https://github.com/axcrockett"
+  },
+  "repository": "https://github.com/axcrockett/windows-hook-adapter",
+  "license": "Apache-2.0",
+  "keywords": ["windows", "hooks", "bash", "python", "powershell", "conversion", "cross-platform"]
+}
